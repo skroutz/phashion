@@ -1,3 +1,3 @@
 module Phashion
-  VERSION = '1.2.0.skroutz.2'
+  VERSION = '1.2.0.skroutz.3'
 end
