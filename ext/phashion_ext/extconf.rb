@@ -40,9 +40,11 @@ Dir.chdir(HERE) do
     system("cp -f libpHash.a libpHash_gem.a")
     system("cp -f libpHash.la libpHash_gem.la")
   end
-  $LIBS = " -lpthread -lpHash_gem -lstdc++ -ljpeg -lpng -lm"
+  $LIBS = " -lpthread -lpHash_gem -lstdc++ -lm"
 end
 
+pkg_config 'libjpeg'
+pkg_config 'libpng'
 have_header 'sqlite3ext.h'
 
 create_makefile 'phashion_ext'
